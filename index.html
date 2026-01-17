@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Kushal Acharya | Portfolio</title>
+
+    <meta
+      name="description"
+      content="Kushal Acharya is a Computer Engineering student and aspiring full-stack developer specializing in web and application development."
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="./globals.css" />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/sidebar.css" />
+    <link rel="stylesheet" href="css/hero.css" />
+    <link rel="stylesheet" href="css/about.css" />
+    <link rel="stylesheet" href="css/skill.css" />
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  emailjs.init("nl3sfKgJyV2sWP53z");
+</script>
+<script src="./js/emailsubmit.js"></script>
+
+  </head>
+
+  <body>
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar" id="sidebar">
+      <i id="hamburger" class="fa-solid fa-bars sidebar_hamburger"></i>
+
+      <div class="sidebar_content">
+        <ul class="sidebar_list">
+          <li><a href="#hero">Home</a></li> <br>
+          <li><a href="#about">About</a></li><br>
+          <li><a href="#skills">Skills</a></li><br>
+          <li><a href="#contactForm">Contact</a></li>
+
+        </ul>
+      </div>
+    </nav>
+
+    
+
+    <main>
+      <!-- Hero Section -->
+      <!-- Hero Section -->
+<section id="hero">
+  <!-- Left Text -->
+  <div id="hero-text">
+    <h1>
+      <span id="typingText"></span><br />
+      <span class="name">Kushal Acharya</span>
+    </h1>
+    <p class="hero_subtitle">Computer Engineering Student & Developer</p>
+  </div>
+
+  <!-- Right Profile Image -->
+  <div class="profile-image-container">
+    <img src="./source/my_pic.jpg" alt="Kushal Acharya" class="profile-image" />
+  </div>
+</section>
+
+      <!-- About Section -->
+      <section id="about" class="section">
+        <p class="section_title">About Me</p>
+        <p class="section_subtitle">Who Am I?</p>
+
+        <p class="about_description">
+          <strong>I'm Kushal Acharya,</strong> a Computer Engineering student
+          with a passion for building clean, responsive websites and
+          applications. I enjoy learning new technologies, solving real-world
+          problems, and continuously improving my skills.
+        </p>
+
+        <div class="about_skills">
+          <div class="about_skills_box">
+            <i class="fa-solid fa-terminal"></i>
+            <h3>C & C++</h3>
+          </div>
+
+          <div class="about_skills_box">
+            <i class="fa-brands fa-python"></i>
+            <h3>Python</h3>
+          </div>
+
+          <div class="about_skills_box">
+            <i class="fa-solid fa-robot"></i>
+            <h3>AI / ML</h3>
+          </div>
+
+          <div class="about_skills_box">
+            <i class="fa-solid fa-code"></i>
+            <h3>Web Development</h3>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section id="skills" class="section">
+        <p class="section_title">My Specialties</p>
+        <p class="section_subtitle">Technical Skills</p>
+
+        <div class="all-skills">
+          <div class="skills">
+            <p>HTML/CSS/JS</p>
+            <div class="skill_bg_box">
+              <div class="skill_percent_box fornt-end">
+                <span>70%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="skills">
+            <p>Python</p>
+            <div class="skill_bg_box">
+              <div class="skill_percent_box python">
+                <span>60%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="skills">
+            <p>SQL (MySQL/PostgreSQL)</p>
+            <div class="skill_bg_box">
+              <div class="skill_percent_box sql">
+                <span>20%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="skills">
+            <p>C & C++</p>
+            <div class="skill_bg_box">
+              <div class="skill_percent_box c">
+                <span>70%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+    </main>
+
+   
+      <!-- Contact Section -->
+<section id="contact" class="section">
+ <p class="section_title">Contact Me</p>
+  <p class="section_subtitle">Get in Touch</p>
+
+
+        
+
+  <form id="contactForm" class="contact-form" onsubmit="sendMail(event)">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your Name" required />
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Your Email" required />
+    </div>
+
+    <div class="form-group">
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+    </div>
+
+    <button type="submit">
+      Send Message <i class="fa-solid fa-paper-plane"></i>
+    </button>
+
+  </form>
+</section>
+
+<!-- Footer -->
+
+<footer id="footer">
+  <div class="footer-container">
+    
+    <div class="footer-item">
+      <h3>LOCATION</h3>
+      <p>Kathmandu, Nepal</p>
+    </div>
+
+    
+    <div class="footer-item">
+      <h3>AROUND THE WEB</h3>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/kushalaacharya/"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/virtualkushal"><i class="fab fa-github"></i></a>       
+        <a href="https://www.facebook.com/kusall#"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/kushalacharya09/"><i class="fab fa-instagram"></i></a> 
+       
+      </div>
+    </div>
+
+    
+    <div class="footer-item">
+      <h3>ABOUT ME</h3>
+      <p>I love travelling and coding.</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>Copyright &copy; Kushal Acharya 2026</p>
+  </div>
+</footer>
+
+    <script src="./js/script.js">
+    
+    </script>
+
+ 
+
+<script src="./js/emailsubmit.js"></script>
+  </body>
+</html>
